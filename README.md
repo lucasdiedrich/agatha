@@ -8,9 +8,9 @@ O usuário já deve possuir um ambiente Docker funcional para utilizar este cont
 
 ## Aquisição das Chaves
 
-Vale ressaltar que para utilizar este container ainda se faz necessário realizar o pedido para aquisição das chaves afim de realizar a autenticação com o Brasil Cidadão. O procedimento para aquisição das chaves estão disponível no [manual de instalação do Agatha](https://softwarepublico.gov.br/social/articles/0005/2222/Manual_de_Instala__o_Agatha.pdf). 
+Vale ressaltar que para utilizar este container ainda é necessário realizar o pedido de aquisição das chaves a fim de realizar a autenticação com o Brasil Cidadão. Os procedimentos para aquisição das chaves estão disponíveis no [manual de instalação do Agatha](https://softwarepublico.gov.br/social/articles/0005/2222/Manual_de_Instala__o_Agatha.pdf). 
 
-Informamos que serão necessário a solicitação das chaves em dois momentos, um para ambiente de teste, e a solicitação deverá ser repetidas afim de pedir as chaves para o ambiente de produção do Brasil Cidadão.
+A solicitação das chaves deverá ser realizada em dois momentos: uma solicitação para ambiente de testes e outra solicitação para o ambiente de produção.
 
 ## Como utilizar
 
@@ -23,11 +23,11 @@ docker run --name agatha \
            -d lucasdiedrich/agatha
 ```
 
-Está opção é a mais simples, deve ser repassadas as informações para a conexão com o banco, caso seja necessário levantar um banco de dados utilizada a opção com o docker-compose.
+Este caso de uso é o mais simples.  Caso seja necessária a utilização de um banco de dados, os parâmetros de conexão ao banco devem ser repassados com docker-compose.
 
 ### Docker-compose
 
-Existe um exemplo de docker-compose [docker-compose](./docker-compose.yml), só baixar o arquivo e executar como exemplo abaixo:
+Baixe aqui um exemplo de docker-compose [docker-compose](./docker-compose.yml) e execute com o comando abaixo:
 
 ```bash
 docker-compose up
