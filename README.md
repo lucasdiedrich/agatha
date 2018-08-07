@@ -14,11 +14,14 @@ Informamos que serão necessário a solicitação das chaves em dois momentos, u
 
 ## Como utilizar
 
+
+```bash
 docker run --name agatha \
            -p 80:80 -p 443:443 \
            -e ECIDADAO_SERVER=... \
            -v /etc/localtime:/etc/localtime \
            -d lucasdiedrich/agatha
+```
 
 Está opção é a mais simples, deve ser repassadas as informações para a conexão com o banco, caso seja necessário levantar um banco de dados utilizada a opção com o docker-compose.
 
