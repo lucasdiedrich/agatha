@@ -56,3 +56,5 @@ fi
 # Inicia o Java Server
 #
 /usr/bin/java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app.jar
+
+exit $?
