@@ -18,7 +18,7 @@ Todas as versões deste container podem ser localizadas em [Docker Hub Tags tab]
 | ECIDADAO_ENV |  PROD  | Se utilizará a API de teste do Brasil Cidadão |
 | ECIDADAO_SERVER |  MINHAINSTITUICAO.EDU.BR  | Domínio da sua aplicação fornecido na requisição do acesso  |
 | ECIDADAO_ID |  MINHAID  | ID fornecido pelo Brasil Cidadão |
-| ECIDADAO_KEY |  MINHAKEY  | SECRET fornecido pelo Brasil Cidadão |
+| ECIDADAO_SECRET |  MINHAKEY  | SECRET fornecido pelo Brasil Cidadão |
 |   DB_HOST  | agathadb | Database host |
 |   DB_USER  | gestaoriscos | Database username |
 |   DB_PASSWORD  | gestaoriscos | Database password |

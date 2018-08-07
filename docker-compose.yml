@@ -26,6 +26,6 @@ services:
       # ECIDADAO_ENV: PROD | TESTE
       # ECIDADAO_SERVER: MINHAINSTITUICAO.EDU.BR
       # ECIDADAO_ID: MINHAID
-      # ECIDADAO_KEY: mINHAKEY
+      # ECIDADAO_SECRET: mINHAKEY
     depends_on: 
      - agathadb
