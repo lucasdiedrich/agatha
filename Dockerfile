@@ -6,6 +6,7 @@ WORKDIR /
 
 # Postgres Opts
 ENV JAVA_OPTS="-server -Xmx2G -XX:MinHeapFreeRatio=20 -XX:MaxHeapFreeRatio=40 -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled -XX:+UseCMSInitiatingOccupancyOnly -XX:CMSInitiatingOccupancyFraction=70" \
+    CONF_CHECK="1" \
     DB_CHECK="1" \
     DB_HOST="agathadb" \
     DB_NAME="agatha" \

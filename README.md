@@ -45,6 +45,7 @@ Todas as versões deste container podem ser localizadas em [Docker Hub Tags](htt
 | ECIDADAO_SERVER |  MINHAINSTITUICAO.EDU.BR  | Domínio da sua aplicação fornecido na requisição do acesso  |
 | ECIDADAO_ID |  MINHAID  | ID fornecido pelo Brasil Cidadão |
 | ECIDADAO_SECRET |  MINHAKEY  | SECRET fornecido pelo Brasil Cidadão |
+|   CONF_CHECK  | 1 | Força a verificação e configuração dos arquivos do spring, este item deve ser desabilitado caso esteja utilizando seus prórios arquivo montando o volume /config. |
 |   DB_CHECK  | 1 | Força a verificação e criação dos schemas necessários no banco de dados |
 |   DB_HOST  | agathadb | Database host |
 |   DB_USER  | gestaoriscos | Database username |

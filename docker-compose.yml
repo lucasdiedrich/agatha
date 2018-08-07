@@ -23,6 +23,8 @@ services:
       # DB_PASSWORD: gestaoriscos
       # DB_USER: gestaoriscos
       # DB_NAME: agatha
+      # DB_CHECK: 0
+      # CONF_CHECK: 0
       # ECIDADAO_ENV: PROD | TESTE
       # ECIDADAO_SERVER: MINHAINSTITUICAO.EDU.BR
       # ECIDADAO_ID: MINHAID
