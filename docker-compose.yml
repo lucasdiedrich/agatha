@@ -1,0 +1,31 @@
+version: "3.6"
+services:
+  agathadb:
+    image: postgres:11-alpine
+    restart: always
+    container_name: agathadb
+    environment:
+      POSTGRES_PASSWORD: gestaoriscos
+      POSTGRES_USER: gestaoriscos
+      POSTGRES_DB: agatha
+  agatha:
+    image: lucasdiedrich/agatha
+    restart: always
+    container_name: agatha
+    ports:
+      - "80:80"
+      - "443:443"
+    # volumes:
+    #   - "/volumes/agatha/config:/config"
+    #   - "/etc/localtime:/etc/localtime"
+    environment:
+      # DB_HOST: agathadb
+      # DB_PASSWORD: gestaoriscos
+      # DB_USER: gestaoriscos
+      # DB_NAME: agatha
+      # ECIDADAO_ENV: PROD | TESTE
+      # ECIDADAO_SERVER: MINHAINSTITUICAO.EDU.BR
+      # ECIDADAO_ID: MINHAID
+      # ECIDADAO_KEY: mINHAKEY
+    depends_on: 
+     - agathadb

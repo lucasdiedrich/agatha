@@ -1,0 +1,15 @@
+ecidadao:
+  client-id: ID
+  client-secret: SECRET
+  pre-established-redirect-uri: https://DOMINIO/gestaoriscos/api/login/openid
+  sistema:
+    dominio: DOMINIO
+    url-pattern-protegido: /**
+    redireciona-login-sucesso: https://DOMINIO
+    redireciona-logout-sucesso: https://DOMINIO
+  use-current-uri: false
+  scope: openid
+  # URIS dO AMBIENTE DE TESTES
+  access-token-uri: https://testescp-ecidadao.estaleiro.serpro.gov.br/scp/token
+  user-authorization-uri: https://testescp-ecidadao.estaleiro.serpro.gov.br/scp/authorize
+
