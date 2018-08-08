@@ -17,7 +17,7 @@ A solicitação das chaves deverá ser realizada em dois momentos: uma solicita�
 
 ```bash
 docker run --name agatha \
-           -p 80:80 -p 443:443 \
+           -p 8080:80 -p 8443:443 \
            -e ECIDADAO_SERVER=... \
            -v /etc/localtime:/etc/localtime \
            -d lucasdiedrich/agatha
@@ -57,11 +57,8 @@ Todas as versões deste container podem ser localizadas em [Docker Hub Tags](htt
 |  Volume  | Info |
 |:------:|:-------:|
 | /config/ | Onde estão localizados os arquivos necessário para configurar do spring |
-
-
-## SSL
-
-TODO
+| /etc/nginx/certificates/cert.pem | Certificado SSL para navegação segura ponto-a-ponto |
+| /etc/nginx/certificates/key.pem | Chave SSL para navegação segura ponto-a-ponto |
 
 ## License
 
