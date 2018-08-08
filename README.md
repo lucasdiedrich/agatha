@@ -33,6 +33,14 @@ Baixe aqui um exemplo de [docker-compose](https://github.com/lucasdiedrich/agath
 docker-compose up
 ```
 
+### Criando usuário admin
+
+Dentro do container existe um script para criação do usuário administrador, no Ágatha o usuário administrador possui o perfil de "Núcleo". Sendo assim siga os comandos abaixo para inserir o novo usuário:
+
+```bash
+docker exec -it <nome_do_container> create-admin 'Nome do usuário' 'CPF00000000000' 'meuemail@gmail.com'
+```
+
 ## Versões
 
 Todas as versões deste container podem ser localizadas em [Docker Hub Tags](https://hub.docker.com/r/lucasdiedrich/agatha/tags/).
