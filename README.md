@@ -6,6 +6,8 @@ Este repositório consta um build utilizável para o projeto visto que a documen
 
 O usuário já deve possuir um ambiente Docker funcional para utilizar este container.
 
+Para maiores informações em relação ao projeto Agatha, acesse este [link](https://softwarepublico.gov.br/social/agatha).
+
 ## Aquisição das Chaves
 
 Vale ressaltar que para utilizar este container ainda é necessário realizar o pedido de aquisição das chaves a fim de realizar a autenticação com o Brasil Cidadão. Os procedimentos para aquisição das chaves estão disponíveis no [manual de instalação do Agatha](https://softwarepublico.gov.br/social/articles/0005/2222/Manual_de_Instala__o_Agatha.pdf). 
@@ -62,4 +64,6 @@ Todas as versões deste container podem ser localizadas em [Docker Hub Tags](htt
 
 ## License
 
-MIT © [Lucas Diedrich](https://github.com/lucasdiedrich)
+Este projeto docker utiliza licença MIT © [Lucas Diedrich](https://github.com/lucasdiedrich)
+
+Sobre o licenciamento do software Ágatha deve estar disponível no site do [Software Público Brasileiro](https://softwarepublico.gov.br/social/agatha)
