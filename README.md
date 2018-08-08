@@ -2,11 +2,9 @@
 
 O Sistema Ágatha – Sistema de Gestão de Integridade, Riscos e Controles consiste em uma ferramenta automatizada, desenvolvida pelo Ministério do Planejamento, Desenvolvimento e Gestão, para auxiliar no processo de gerenciamento de riscos e controle, tendo em vista o item III do Art. 7º, da Portaria GM/MP n° 426, de 2016, que tem como diretriz para a gestão de riscos possibilitar a obtenção de informações úteis à tomada de decisão para a consecução dos objetivos  institucionais e para o gerenciamento e a manutenção dos riscos dentro dos padrões definidos pelas instâncias supervisoras. 
 
-Este repositório consta um build utilizável para o projeto visto que a documentação necessário para a instalação do projeto é complexa. Este projeto utiliza alpine para sua construção base para diminuir o tamanho final do container.
+Neste repositório consta um build utilizável para o projeto, visto que a documentação necessário para a instalação do projeto é complexa. Este projeto utiliza Alpine para sua construção base para diminuir o tamanho final do container.
 
-O usuário já deve possuir um ambiente Docker funcional para utilizar este container.
-
-Para maiores informações em relação ao projeto Agatha, acesse este [link](https://softwarepublico.gov.br/social/agatha).
+O usuário já deve possuir um ambiente Docker funcional para utilizar este container. Para maiores informações em relação ao projeto Agatha, acesse este [link](https://softwarepublico.gov.br/social/agatha).
 
 ## Aquisição das Chaves
 
@@ -29,7 +27,7 @@ Este caso de uso é o mais simples.  Caso seja necessária a utilização de um 
 
 ### Docker-compose
 
-Baixe aqui um exemplo de docker-compose [docker-compose](./docker-compose.yml) e execute com o comando abaixo:
+Baixe aqui um exemplo de [docker-compose](https://github.com/lucasdiedrich/agatha/blob/master/docker-compose.yml) e execute com o comando abaixo:
 
 ```bash
 docker-compose up
