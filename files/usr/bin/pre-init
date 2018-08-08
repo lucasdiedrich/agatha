@@ -3,6 +3,8 @@ set -e
 
 APP="/config/application.properties"
 APPYAML="/config/application.yaml"
+LOGJ=/var/log/java.log
+
 #
 # Verificação do banco de dados.
 #
@@ -57,6 +59,6 @@ fi
 #
 # Inicia o Java Server
 #
-/usr/bin/java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app.jar
+/usr/bin/java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app.jar > $LOGJ
 
 exit $?
