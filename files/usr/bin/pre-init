@@ -10,7 +10,9 @@ LOGJ=/var/log/java.log
 #
 if [[ $DB_CHECK -eq "1" ]]; then
     echo "Verificando banco de dados..."
-    export PGPASSWORD=$DB_PASSWORD
+    if [[ ! -z $DB_PASSWORD ]]; then
+        export PGPASSWORD=$DB_PASSWORD
+    fi
 
     CREATE_SCHEMA="psql -U $DB_USER -h $DB_HOST $DB_NAME"
 

@@ -4,6 +4,10 @@ V_NOME=$1
 V_CPF=$2
 V_EMAIL=$3
 
+if [[ ! -z $DB_PASSWORD ]]; then
+    export PGPASSWORD=$DB_PASSWORD
+fi
+
 if [[ -z $V_NOME || -z $V_CPF || -z $V_EMAIL ]]; then
     echo "ERROR: O comando deve ser utilizado como abaixo:"
     echo "create-admin 'NOME DO USUARIO' 'CPF' 'EMAIL'"
