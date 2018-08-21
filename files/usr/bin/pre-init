@@ -44,7 +44,7 @@ if [[ $CONF_CHECK -eq "1" ]]; then
         sed -i "/redireciona-login-sucesso:/c\    redireciona-login-sucesso: https://$ECIDADAO_SERVER" $APPYAML
         sed -i "/redireciona-logout-sucesso:/c\    redireciona-logout-sucesso:  https://$ECIDADAO_SERVER" $APPYAML
 
-        if [[ $DB_CHECK -eq "PROD" ]]; then
+        if [[ $ECIDADAO_ENV -eq "PROD" ]]; then
             sed -i "/access-token-uri:/c\  access-token-uri: https://scp.brasilcidadao.gov.br/scp/token" $APPYAML
             sed -i "/user-authorization-uri:/c\  user-authorization-uri: https://scp.brasilcidadao.gov.br/scp/authorize" $APPYAML
         else
