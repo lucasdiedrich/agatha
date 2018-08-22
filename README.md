@@ -59,6 +59,7 @@ Todas as versões deste container podem ser localizadas em [Docker Hub Tags](htt
 |   DB_USER  | gestaoriscos | Database username |
 |   DB_PASSWORD  | gestaoriscos | Database password |
 |   DB_NAME  | agatha | Database name |
+|   SIORG  | 2981 | Código do Siorg da Instituição |
 
 ## Pontos de montagem (Volumes)
 

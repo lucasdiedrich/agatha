@@ -3,6 +3,7 @@ set -e
 
 APP="/config/application.properties"
 APPYAML="/config/application.yaml"
+APPJS="/usr/share/nginx/html/scripts"
 LOGJ=/var/log/java.log
 
 #
@@ -56,6 +57,11 @@ if [[ $CONF_CHECK -eq "1" ]]; then
         echo "NÃO FOI POSSIVEL ENCONTRAR O ARQUIVO DE CONFIGURAÇÃO application.YAML"
         exit 1
     fi
+fi
+
+if [[ $SIORG -ne "2981" ]]; then
+    sed -i "s/idOrgaoPai=2981/idOrgaoPai=${SIORG}/g" $APPJS/app-*.js
+    sed -i "s:orgao/2981:orgao/${SIORG}:g" $APPJS/app-*.js
 fi
 
 #

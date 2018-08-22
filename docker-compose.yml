@@ -29,5 +29,6 @@ services:
       # ECIDADAO_SERVER: MINHAINSTITUICAO.EDU.BR
       # ECIDADAO_ID: MINHAID
       # ECIDADAO_SECRET: mINHAKEY
+      # SIORG: CODIGO SIORG DA MINHA INSTITUIÇÃO
     depends_on: 
      - agathadb
