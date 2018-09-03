@@ -9,7 +9,7 @@ LOGJ=/var/log/java.log
 #
 # Verificação do banco de dados.
 #
-if [[ $DB_CHECK -eq "1" ]]; then
+if [[ "$DB_CHECK" = "1" ]]; then
     echo "Verificando banco de dados..."
     if [[ ! -z $DB_PASSWORD ]]; then
         export PGPASSWORD=$DB_PASSWORD
@@ -27,7 +27,7 @@ fi
 #
 # Verificação de sobreposição dos arquivos de configuração.
 #
-if [[ $CONF_CHECK -eq "1" ]]; then
+if [[ "$CONF_CHECK" = "1" ]]; then
     if [[ -f $APP  ]]; then
         sed -i "/spring.datasource.url=/c\spring.datasource.url=jdbc:postgresql://$DB_HOST:5432/$DB_NAME" $APP
         sed -i "/spring.datasource.username=/c\spring.datasource.username=$DB_USER" $APP
@@ -45,7 +45,7 @@ if [[ $CONF_CHECK -eq "1" ]]; then
         sed -i "/redireciona-login-sucesso:/c\    redireciona-login-sucesso: https://$ECIDADAO_SERVER" $APPYAML
         sed -i "/redireciona-logout-sucesso:/c\    redireciona-logout-sucesso:  https://$ECIDADAO_SERVER" $APPYAML
 
-        if [[ $ECIDADAO_ENV -eq "PROD" ]]; then
+        if [[ "$ECIDADAO_ENV" = "PROD" ]]; then
             sed -i "/access-token-uri:/c\  access-token-uri: https://scp.brasilcidadao.gov.br/scp/token" $APPYAML
             sed -i "/user-authorization-uri:/c\  user-authorization-uri: https://scp.brasilcidadao.gov.br/scp/authorize" $APPYAML
         else
