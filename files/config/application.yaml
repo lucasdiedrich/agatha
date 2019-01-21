@@ -12,4 +12,5 @@ ecidadao:
   # URIS dO AMBIENTE DE TESTES
   access-token-uri: https://testescp-ecidadao.estaleiro.serpro.gov.br/scp/token
   user-authorization-uri: https://testescp-ecidadao.estaleiro.serpro.gov.br/scp/authorize
+#  teste validacao-uri: https://testescp-ecidadao.estaleiro.serpro.gov.br/scp/jwk
 
