@@ -41,6 +41,10 @@ Dentro do container existe um script para criação do usuário administrador, n
 docker exec -it <nome_do_container> create-admin 'Nome do usuário' 'CPF00000000000' 'meuemail@gmail.com'
 ```
 
+### Carga inicial dos dados do SIORG
+
+Para a inicialização do sistema, é necessário fazer uma pré-carga dos dados de unidades administrativas, o que pode ser feito através do link [http://endereço-do-ambiente/gestaoriscos/api/siorg/importar](http://endereço-do-ambiente/gestaoriscos/api/siorg/importar).
+
 ## Versões
 
 Todas as versões deste container podem ser localizadas em [Docker Hub Tags](https://hub.docker.com/r/lucasdiedrich/agatha/tags/).

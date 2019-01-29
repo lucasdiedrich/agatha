@@ -51,6 +51,7 @@ if [[ "$CONF_CHECK" = "1" ]]; then
         else
             sed -i "/access-token-uri:/c\  access-token-uri: https://testescp-ecidadao.estaleiro.serpro.gov.br/scp/token" $APPYAML
             sed -i "/user-authorization-uri:/c\  user-authorization-uri: https://testescp-ecidadao.estaleiro.serpro.gov.br/scp/authorize" $APPYAML
+            sed -i '/validacao-uri:/s/^#//g' $APPYAML
         fi
     else
         echo "ERRO !!!"
