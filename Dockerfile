@@ -28,8 +28,6 @@ FROM maven:3-jdk-8-alpine AS backend
 WORKDIR /
 COPY --from=base /agatha.git /agatha.git
 RUN cd /agatha.git/codigo-fonte/servico/ && \
-    sed -i "s:0.3.17:0.3.11:g" /agatha.git/codigo-fonte/servico/pom.xml && \
-    sed -i "s:http\://element.basis.com.br/content/groups/public/:http\://element.basis.com.br/repository/releases/:g" /agatha.git/codigo-fonte/servico/pom.xml && \
     mvn -Dmaven.test.failure.ignore -U clean package && ls -lah
 
 #
