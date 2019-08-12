@@ -53,6 +53,10 @@ COPY --from=frontend /agatha.git/codigo-fonte/cliente/dist/ /usr/share/nginx/htm
 COPY --from=backend /agatha.git/codigo-fonte/servico/target/app.jar /app.jar
 COPY files/ /
 
+RUN apk --update --no-cache add msttcorefonts-installer fontconfig && \
+    update-ms-fonts && \
+    fc-cache -f
+
 RUN apk add --update --no-cache openssl bash nginx supervisor postgresql-client && \
     mkdir -p /etc/nginx/certificates/ /run/nginx/ /run/supervisord/ && \
     openssl req -x509 -nodes -newkey rsa:4096 -keyout /etc/nginx/certificates/key.pem -out /etc/nginx/certificates/cert.pem -subj '/CN=localhost' -days 365 && \
