@@ -28,8 +28,6 @@ FROM maven:3-jdk-8-alpine AS backend
 WORKDIR /
 COPY --from=base /agatha.git /agatha.git
 RUN cd /agatha.git/codigo-fonte/servico/ && \
-    sed -i "s:0.3.17:0.3.11:g" /agatha.git/codigo-fonte/servico/pom.xml && \
-    sed -i "s:http\://element.basis.com.br/content/groups/public/:http\://element.basis.com.br/repository/releases/:g" /agatha.git/codigo-fonte/servico/pom.xml && \
     mvn -Dmaven.test.failure.ignore -U clean package && ls -lah
 
 #
@@ -55,11 +53,14 @@ COPY --from=frontend /agatha.git/codigo-fonte/cliente/dist/ /usr/share/nginx/htm
 COPY --from=backend /agatha.git/codigo-fonte/servico/target/app.jar /app.jar
 COPY files/ /
 
-RUN apk add --update --no-cache openssl bash nginx supervisor postgresql-client && \
+RUN apk add --update --no-cache openssl bash nginx supervisor postgresql-client \
+    msttcorefonts-installer fontconfig && \
     mkdir -p /etc/nginx/certificates/ /run/nginx/ /run/supervisord/ && \
     openssl req -x509 -nodes -newkey rsa:4096 -keyout /etc/nginx/certificates/key.pem -out /etc/nginx/certificates/cert.pem -subj '/CN=localhost' -days 365 && \
     chmod +x /usr/bin/pre-init /usr/bin/create-admin && \
-    rm -rf /var/cache/apk/*
+    rm -rf /var/cache/apk/* && \
+    update-ms-fonts && \
+    fc-cache -f
 
 VOLUME ["/config"]
 
