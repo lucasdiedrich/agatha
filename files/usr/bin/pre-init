@@ -32,6 +32,15 @@ if [[ "$CONF_CHECK" = "1" ]]; then
         sed -i "/spring.datasource.url=/c\spring.datasource.url=jdbc:postgresql://$DB_HOST:5432/$DB_NAME" $APP
         sed -i "/spring.datasource.username=/c\spring.datasource.username=$DB_USER" $APP
         sed -i "/spring.datasource.password=/c\spring.datasource.password=$DB_PASSWORD" $APP
+
+        sed -i "/spring.mail.host=/c\spring.mail.host=$EMAIL_SERVIDOR" $APP
+        sed -i "/spring.mail.properties.mail.smtp.auth=/c\spring.mail.properties.mail.smtp.auth=$EMAIL_AUTENTICACAO" $APP
+        sed -i "/spring.mail.username=/c\spring.mail.username=$EMAIL_USUARIO" $APP
+        sed -i "/spring.mail.password=/c\spring.mail.password=$EMAIL_SENHA" $APP
+        sed -i "/spring.mail.properties.mail.smtp.socketFactory.port=/c\spring.mail.properties.mail.smtp.socketFactory.port=$EMAIL_PORTA" $APP
+        sed -i "/mail.remetente=/c\mail.remetente=$EMAIL_REMETENTE" $APP
+        sed -i "/mail.destinatario=/c\mail.destinatario=$EMAIL_DESTINATARIO" $APP
+        sed -i "/mail.fale.conosco=/c\mail.fale.conosco=$EMAIL_FALECONOSCO" $APP
     else
         echo "ERRO !!!"
         echo "NÃO FOI POSSIVEL ENCONTRAR O ARQUIVO DE CONFIGURAÇÃO application.properties"
