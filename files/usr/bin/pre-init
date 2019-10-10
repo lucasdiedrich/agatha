@@ -41,6 +41,7 @@ if [[ "$CONF_CHECK" = "1" ]]; then
         sed -i "/mail.remetente=/c\mail.remetente=$EMAIL_REMETENTE" $APP
         sed -i "/mail.destinatario=/c\mail.destinatario=$EMAIL_DESTINATARIO" $APP
         sed -i "/mail.fale.conosco=/c\mail.fale.conosco=$EMAIL_FALECONOSCO" $APP
+        sed -i "/link.sistema=/c\link.sistema=https://$ECIDADAO_SERVER" $APP
     else
         echo "ERRO !!!"
         echo "NÃO FOI POSSIVEL ENCONTRAR O ARQUIVO DE CONFIGURAÇÃO application.properties"
