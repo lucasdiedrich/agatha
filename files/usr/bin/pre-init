@@ -56,8 +56,8 @@ if [[ "$CONF_CHECK" = "1" ]]; then
         sed -i "/redireciona-logout-sucesso:/c\    redireciona-logout-sucesso:  https://$ECIDADAO_SERVER" $APPYAML
 
         if [[ "$ECIDADAO_ENV" = "PROD" ]]; then
-            sed -i "/access-token-uri:/c\  access-token-uri: https://scp.brasilcidadao.gov.br/scp/token" $APPYAML
-            sed -i "/user-authorization-uri:/c\  user-authorization-uri: https://scp.brasilcidadao.gov.br/scp/authorize" $APPYAML
+            sed -i "/access-token-uri:/c\  access-token-uri: https://sso.acesso.gov.br/token" $APPYAML
+            sed -i "/user-authorization-uri:/c\  user-authorization-uri: https://sso.acesso.gov.br/authorize" $APPYAML
         else
             sed -i "/access-token-uri:/c\  access-token-uri: https://testescp-ecidadao.estaleiro.serpro.gov.br/scp/token" $APPYAML
             sed -i "/user-authorization-uri:/c\  user-authorization-uri: https://testescp-ecidadao.estaleiro.serpro.gov.br/scp/authorize" $APPYAML
